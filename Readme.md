@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Сергей Слукин](https://up.htmlacademy.ru/htmlcss/31/user/1778767).
-* Наставник: `[Павел Бубликов](https://htmlacademy.ru/profile/pbuba)`.
+* Наставник: [Павел Бубликов](https://htmlacademy.ru/profile/pbuba).
 
 ---
 
