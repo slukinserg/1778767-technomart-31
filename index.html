@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
+	<head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
-  </head>
-  <body>
-	  <header>
+  	</head>
+  	<body>
+	  	<header>
 		<img src="https://via.placeholder.com/150x100" alt="Логотип магазина">
 		<form>
 			<input type="search" placeholder="Поиск">
@@ -24,36 +24,56 @@
 		<button type="button">Регистрация</button>
 		<nav>
 			<ul>
-				<li><a href="#">Главная</a></li> <!--Так заблокировать ссылку?-->
+				<li><a>Главная</a></li>
 				<li><a href="#">Компания</a></li>
-				<li><a href="catalog.html"></a>Каталог</li> <!--Якорь или так оставить?-->
-				<li><a href="#"></a>Новости</li> <!--Почему новости не подсвечены как ссылка в браузере?-->
+				<li><a href="catalog.html">Каталог</a></li>
+				<li><a href="#">Новости</a></li>
 				<li><a href="#">Спецпредложения</a></li>
 				<li><a href="#">Доставка</a></li>
 				<li><a href="#">Контакты</a></li>
 			</ul>
 		</nav>
-	  </header>
-	  <main>
-		  <h1>Интернет-магазин Техномарт</h1>
-		  <section>
-			  <h2>Категории услуг и товаров</h2> <!--Дальше не пойму? Если не списком! То как? Повально все подрят?-->
-			  <a href="#"><h3>Материалы</h3></a>
-			  <button type="button">На любой вкус</button>
-			  <a href="#"><h3>Инструмент</h3></a> <!--Кнопка, картинка, текст потом с помощью стилей в одно целое сольются? Не пойму?-->
-			  <button type="button">На все случаи</button>
-			  <a href="#"><h3>Техника</h3></a>
-			  <button type="button">Для стройки</button>
-			  <a href="#"><h3>Скидка 50%</h3></a>
-			  <button type="button">На 350 товаров</button>
-			  <a href="#"><h3>Доставка</h3></a>
-			  <button type="button">Бесплатно</button>
-			  <a href="#"><h3>Перфораторы</h3></a>
-			  <p>Настоящие мужские игрушки</p>
-			  <button type="button">Открыть каталог</button>
-			  <a href="#"><h3>Дрели</h3></a>
-			  <p>Соседям на радость!</p>
-			  <button type="button">Открыть каталог</button>
+	  	</header>
+	  	<main>
+		  	<h1>Интернет-магазин Техномарт</h1>
+		  	<section>
+				  <h2>Категории услуг и товаров</h2>
+					<ul>
+						<li>
+							<a href="#"><h3>Материалы</h3></a>
+							<button type="button">На любой вкус</button>
+						</li>
+						<li> 
+							<a href="#"><h3>Инструмент</h3></a>
+							<button type="button">На все случаи</button>
+						</li>
+						<li> 
+							<a href="#"><h3>Техника</h3></a>
+							<button type="button">Для стройки</button>
+						</li>
+					</ul>
+					<ul>
+						<li>
+							<a href="#"><h3>Перфораторы</h3></a>
+							<p>Настоящие мужские игрушки</p>
+							<button type="button">Открыть каталог</button>
+						</li>
+						<li>
+							<a href="#"><h3>Дрели</h3></a>
+							<p>Соседям на радость!</p>
+							<button type="button">Открыть каталог</button>
+						</li>
+					</ul>
+					<ul>
+						<li>
+							<a href="#"><h3>Скидка 50%</h3></a>
+							<button type="button">На 350 товаров</button>
+						</li>
+						<li>
+							<a href="#"><h3>Доставка</h3></a>
+							<button type="button">Бесплатно</button>
+						</li>
+					</ul>
 		  </section>
 		  <section>
 			  <h2>Популярные товары</h2>
@@ -149,14 +169,14 @@
 				  <li>Автотрейдинг</li>
 				  <li>ЖелДорЭкспедиция</li>
 			  </ul>
-			  <button type="button">Подробнее о компании</button> <!--Тут надо ссылку или кнопку?-->
+			  <button type="button">Подробнее о компании</button>
 		  </section>
 		  <section>
 			  <h2>Контакты</h2>
 			  <p>
 				Вы можете забрать товар сами, заехав в наш офис: 
 			  </p>
-			  <img src="https://via.placeholder.com/150x100" alt="Карта"> <br> <!--Тут что ссылку или пока так?-->
+			  <img src="https://via.placeholder.com/150x100" alt="Карта">
 			  <button type="button">Заблудились? Напишите нам!</button> 
 		  </section>
 	  </main>
@@ -171,19 +191,17 @@
 		  </section>
 		  <section>
 			  <h2>Навигация по сайту</h2>
-			  <nav> <!--Нужно ли здесь делить список на два? Или nav на два?-->
-				  <ul>
-					  <li><a href="#">Компания</a></li>
-					  <li><a href="#">Новости</a></li>
-					  <li><a href="catalog.html">Каталог</a></li>
-					  <li><a href="#">Доставка</a></li>
-					  <li><a href="#">Контакты</a></li>
-					  <li><a href="#">Материалы</a></li>
-					  <li><a href="#">Техника</a></li>
-					  <li><a href="#">Интернет-магазин</a></li>
-					  <li><a href="#">Спецпредложения</a></li>
-				  </ul>
-			  </nav>
+				<ul>
+					<li><a href="#">Компания</a></li>
+					<li><a href="#">Новости</a></li>
+					<li><a href="catalog.html">Каталог</a></li>
+					<li><a href="#">Доставка</a></li>
+					<li><a href="#">Контакты</a></li>
+					<li><a href="#">Материалы</a></li>
+					<li><a href="#">Техника</a></li>
+					<li><a href="#">Интернет-магазин</a></li>
+					<li><a href="#">Спецпредложения</a></li>
+				</ul>
 		  </section>
 		  <section>
 			  <h2>Юридическая информация</h2>
