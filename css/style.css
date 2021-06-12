@@ -30,14 +30,13 @@
   font-weight: 400;
   text-transform: none;
   background-color: var(--basic-white);
-  color: var(--basic-white);
+  color: var(--basic-black);
 }
 
-ul.features-list,
-ul.slider,
-ul.sale,
-.products ul,
-.producers ul,
+.features-slider-list,
+.features-list,
+.container-products-list,
+.produsers-list,
 .credit-list,
 .site-nav-list {
   list-style: none;
@@ -45,11 +44,6 @@ ul.sale,
 
 a {
   text-decoration: none;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
 }
 
 .main-header {
@@ -60,7 +54,16 @@ img {
   background-color: var(--basic-header);
 }
 
-.logo {
+.button-logo {
+  border: none;
+  width: 220px;
+  height: 47px;
+  color: var(--basic-white);
+  background: var(--basic-logo);
+  box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
+}
+
+.link-logo {
   background-color: var(--basic-logo);
 }
 
@@ -81,7 +84,7 @@ img {
   border: none;
 }
 
-.header-slogan-container {
+.header-slogan {
   font-size: 16px;
   line-height: 23px;
   font-style: italic;
@@ -89,14 +92,14 @@ img {
   color: var(--basic-logo);
 }
 
-.header-phone-container-link {
+.header-phone-link {
   font-size: 21px;
   line-height: 30px;
   font-weight: 700;
   color: var(--basic-logo);
 }
 
-.header-address-container {
+.header-address {
   font-size: 14px;
   line-height: 24px;
   text-align: center;
@@ -120,7 +123,17 @@ img {
   background-color: var(--basic-nav);
 }
 
-.hidden-display {
+.site-nav-link:hover {
+  background: var(--basic-header);
+  box-shadow: inset 0px -5px 0px #293449;
+}
+
+.site-nav-link:active {
+  background: #1d2739;
+  box-shadow: inset 0px -5px 0px #293449;
+}
+
+.visually-hidden {
   background-color: gray;
 }
 
@@ -131,9 +144,32 @@ img {
   line-height: 30px;
   color: var(--basic-white);
 }
+
+.button-features-link {
+  background-color: white;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  width: 135px;
+  height: 38px;
+  text-transform: uppercase;
+  border: none;
+  opacity: 0.3;
+}
+
+.button-features-link:hover {
+  background: #c5c5c5;
+  opacity: 0.3;
+}
+
+.button-features-link:active {
+  background: #a9a9a9;
+  opacity: 0.3;
+}
 .features-item-materials {
   background-color: var(--special-materialserials);
-  color: var(--basic-white);
   width: 300px;
   height: 123px;
 }
@@ -164,20 +200,6 @@ img {
   color: var(--basic-white);
   width: 300px;
   height: 123px;
-}
-
-.button-features-link {
-  background-color: var(--basic-white);
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 18px;
-  text-align: center;
-  background-color: transparent;
-  color: var(--basic-white);
-  width: 135px;
-  height: 38px;
-  text-transform: uppercase;
 }
 
 .button-red-link {
@@ -231,7 +253,7 @@ img {
   color: var(--special-text);
 }
 
-.button-red-link {
+.button-link {
   background-color: var(--basic-logo);
   font-size: 14px;
   line-height: 18px;
@@ -239,6 +261,13 @@ img {
   text-align: center;
   text-transform: uppercase;
   color: var(--basic-white);
+}
+
+.button {
+  background-color: var(--basic-logo);
+  width: 192px;
+  height: 38px;
+  border: none;
 }
 
 .products-item-title {
@@ -267,8 +296,9 @@ img {
   color: var(--special-text-discounts);
 }
 
-.price-tag {
+.last-price {
   background-color: var(--basic-logo);
+  border: none;
   font-family: "PT Sans", Arial, sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -283,13 +313,19 @@ img {
   height: 38px;
 }
 
+.products-item {
+  width: 220px;
+  height: 318px;
+  border: 1px solid var(--special-border-products);
+}
+
 .produsers-item {
   width: 220px;
   height: 145px;
   border: 1px solid var(--special-border-products);
 }
 
-.main-container-delivery {
+.main-delivery {
   background-color: var(--basic-color);
 }
 
@@ -329,9 +365,50 @@ img {
   list-style: none;
 }
 
+.delivery-item-link,
+.guarantee-item-link,
+.credit-item-link {
+  color: var(--basic-white);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 30px;
+}
+
+.delivery-item,
+.guarantee-item,
+.credit-item {
+  width: 240px;
+  height: 61px;
+  background: var(--basic-nav);
+  box-shadow: 0px 1px 0px #293449, inset 0px 1px 0px #405069;
+}
+
 .delivery-item:hover,
 .guarantee-item:hover,
 .credit-item:hover {
+  font-style: normal;
+  background: #293449;
+  box-shadow: 0px 1px 0px #293449, inset 0px 1px 0px #405069;
+  width: 240px;
+  height: 61px;
+}
+
+.delivery-item-link:hover,
+.guarantee-item-link:hover,
+.credit-item-link:hover {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 30px;
+  color: var(--basic-white);
+  width: 240px;
+  height: 61px;
+}
+
+.delivery-item:active,
+.guarantee-item:active,
+.credit-item:active {
   font-style: normal;
   font-weight: bold;
   font-size: 21px;
@@ -341,18 +418,17 @@ img {
   height: 61px;
 }
 
-.delivery-item:focus,
-.guarantee-item:focus,
-.credit-item:focus {
+.delivery-item-link:active,
+.guarantee-item-link:active,
+.credit-item-link:active {
   font-style: normal;
   font-weight: bold;
   font-size: 21px;
   line-height: 30px;
-  background-color: var(--basic-header);
+  color: var(--basic-nav);
   width: 240px;
   height: 61px;
 }
-
 .company-name-title {
   font-style: normal;
   font-weight: normal;
@@ -394,15 +470,12 @@ img {
 }
 
 .footer-logo-img {
+  border: none;
+  color: var(--basic-white);
   background-color: var(--basic-logo);
   box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
   width: 220px;
   height: 68px;
-  border: none;
-}
-
-.footer-logo-nav a {
-  color: var(--special-text-footer-nav);
 }
 
 .footer-phone {
@@ -419,27 +492,30 @@ img {
 }
 
 .footer-nav-link {
-  list-style: none;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
   color: var(--special-text-footer-nav);
 }
 
-.footer-nav-link:hover,
 .footer-tool-link:hover {
+  display: flex;
+  align-items: center;
+  text-decoration-line: underline;
+  color: var(--special-text-footer-yellow);
+}
+
+.footer-nav-link:hover {
   display: flex;
   align-items: center;
   text-decoration-line: underline;
   color: #f1f5f7;
 }
-
 .footer-nav-link:active,
 .footer-tool-link:active {
   display: flex;
   align-items: center;
   color: #f1f5f7;
-  mix-blend-mode: normal;
   opacity: 0.5;
 }
 
