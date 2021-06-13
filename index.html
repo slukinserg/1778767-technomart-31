@@ -301,35 +301,94 @@
           </li>
         </ul>
       </section>
-      <section class="main-delivery">
+      <section class="main-services">
         <h2 class="visually-hidden">Сервис и доставка</h2>
-        <div class="main-delivery service-section">
-          <h3 class="service-section-title">Сервисы</h3>
-          <p class="service-section-desc">
-            Хороший интернет-магазин отличается от плохого не только ценами! Мы
-            стараемся изо всех сил, чтобы сделать ваши покупки приятными.
-          </p>
+        <div class="main-services-container container">
+          <div class="services-header">
+            <h3 class="services-title">Сервисы</h3>
+            <p class="services-slogan">
+              Хороший интернет-магазин отличается от плохого не только ценами!
+              Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
+            </p>
+          </div>
+          <div class="services-info">
+            <div class="services-points">
+              <input
+                class="services-point services-point-delivery"
+                type="radio"
+                name="service-info"
+                value="delivery"
+                id="delivery"
+                checked
+              />
+              <input
+                class="services-point services-point-guarantee"
+                type="radio"
+                name="service-info"
+                value="guarantee"
+                id="guarantee"
+              />
+              <input
+                class="services-point services-point-credit"
+                type="radio"
+                name="service-info"
+                value="credit"
+                id="credit"
+              />
+              <ul class="services-list">
+                <li class="services-item">
+                  <label
+                    class="services-name services-name-delivery"
+                    for="delivery"
+                    >Доставка</label
+                  >
+                </li>
+                <li class="services-item">
+                  <label
+                    class="services-name services-name-guarantee"
+                    for="guarantee"
+                    >Гарантия</label
+                  >
+                </li>
+                <li class="services-item">
+                  <label class="services-name services-name-credit" for="credit"
+                    >Кредит</label
+                  >
+                </li>
+              </ul>
+              <div class="services-slider">
+                <div class="services-slides">
+                  <div class="service service-delivery">
+                    <h3 class="service-title">Доставка</h3>
+                    <p class="services-slogan">
+                      Мы с удовольствием доставим ваш товар прямо <br />к вашему
+                      подъезду совершенно бесплатно! <br />Ведь мы неплохо
+                      заработаем, <br />поднимая его на ваш этаж!
+                    </p>
+                  </div>
+                  <div class="service service-guarantee">
+                    <h3 class="service-title">Гарантия</h3>
+                    <p class="services-slogan">
+                      Если купленный у нас товар поломается или заискрит,
+                      <br />а также в случае пожара, спровоцированного его
+                      <br />возгоранием, вы всегда можете быть уверены в нашей
+                      <br />гарантии. Мы обменяем сгоревший товар на новый.
+                      <br />Дом уж восстановите как-нибудь сами.
+                    </p>
+                  </div>
+                  <div class="service service-credit">
+                    <h3 class="service-title">Кредит</h3>
+                    <p class="services-slogan service-slogan-credit">
+                      Залезть в долговую яму стало проще! <br />Кредитные
+                      консультанты придут вам на помощь.
+                    </p>
+                    <a class="button" href="#">Отправить заявку</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="main-delivery delivery-section">
-          <h3 class="delivery-section-title">Доставка</h3>
-          <p class="delivery-section-desc">
-            Мы с удовольствием доставим ваш товар прямо к вашему подъезду
-            совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на
-            ваш этаж!
-          </p>
-        </div>
-        <ul class="main-delivery slider-credit-list">
-          <li class="delivery-item">
-            <a class="delivery-item-link" href="#">Доставка</a>
-          </li>
-          <li class="guarantee-item">
-            <a class="guarantee-item-link" href="#">Гарантия</a>
-          </li>
-          <li class="credit-item">
-            <a class="credit-item-link" href="#">Кредит</a>
-          </li>
-        </ul>
-        <img src="img/car.png" width="468" height="261" alt="Авто" />
       </section>
       <section class="main-company">
         <h2 class="company-name-title">Компания «Техномарт»</h2>
@@ -425,19 +484,13 @@
             <h2 class="visually-hidden">Социальные сети</h2>
             <ul class="footer-social-list">
               <li class="footer-social-item">
-                <a class="footer-social-link" href="#">
-                  <img src="img/icons/icon-vk.svg" alt="vk" />
-                </a>
+                <a class="footer-social-link link-vk" href="#">Вконтакте</a>
               </li>
               <li class="footer-social-item">
-                <a class="footer-social-link" href="#">
-                  <img src="img/icons/icon-fb.svg" alt="fb" />
-                </a>
+                <a class="footer-social-link link-fb" href="#">Фэйсбук</a>
               </li>
               <li class="footer-social-item">
-                <a class="footer-social-link" href="#">
-                  <img src="img/icons/icon-insta.svg" alt="insta" />
-                </a>
+                <a class="footer-social-link link-inst" href="#">Инстаграм</a>
               </li>
             </ul>
           </section>
@@ -445,7 +498,7 @@
             Обратная связь:
             <a
               class="footer-bootom-feedback feedback-mail-link"
-              href="mail@htmlacademy.ru"
+              href="mailto:mail@htmlacademy.ru"
               >mail@htmlacademy.ru</a
             >
           </p>

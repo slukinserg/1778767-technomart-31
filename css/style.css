@@ -20,8 +20,13 @@
   --special-border-products: #eaeaea;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 .page-body {
   min-width: 1200px;
+  height: 100%;
   margin: 0px;
   padding: 0px;
   font-family: "Cuprum", Arial, sans-serif;
@@ -31,6 +36,9 @@
   text-transform: none;
   background-color: var(--basic-white);
   color: var(--basic-black);
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
 }
 
 .features-slider-list,
@@ -220,7 +228,7 @@ a {
   font-weight: bold;
   font-size: 36px;
   line-height: 36px;
-  display: flex;
+
   align-items: center;
   text-transform: uppercase;
   color: var(--basic-white);
@@ -232,7 +240,7 @@ a {
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
-  display: flex;
+
   align-items: center;
   color: var(--basic-white);
   background-color: gray;
@@ -247,7 +255,7 @@ a {
   font-weight: normal;
   font-size: 30px;
   line-height: 30px;
-  display: flex;
+
   align-items: center;
   text-transform: uppercase;
   color: var(--special-text);
@@ -276,7 +284,7 @@ a {
   font-weight: bold;
   font-size: 18px;
   line-height: 20px;
-  display: flex;
+
   align-items: center;
   text-align: center;
   color: var(--basic-black);
@@ -288,7 +296,7 @@ a {
   font-weight: bold;
   font-size: 17px;
   line-height: 18px;
-  display: flex;
+
   align-items: center;
   text-align: center;
   text-decoration-line: line-through;
@@ -304,7 +312,7 @@ a {
   font-weight: bold;
   font-size: 17px;
   line-height: 18px;
-  display: flex;
+
   align-items: center;
   text-align: center;
   text-transform: uppercase;
@@ -324,111 +332,156 @@ a {
   height: 145px;
   border: 1px solid var(--special-border-products);
 }
-
-.main-delivery {
+/*слайдер сервиса*/
+.main-services {
+  width: 100%;
   background-color: var(--basic-color);
+  margin-bottom: 70px;
+}
+.main-services-container {
+  padding-top: 64px;
+  padding-bottom: 99px;
 }
 
-.service-section-title {
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.services-header {
+  margin-bottom: 70px;
+}
+.services-title {
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
-  color: var(--basic-black);
+  margin: 0 0 25px;
 }
-
-.delivery-section-title {
-  font-size: 30px;
-  line-height: 30px;
-  text-transform: uppercase;
-  color: var(--basic-nav);
-}
-
-.service-section-desc {
-  font-family: "PT Sans", Arial, sans-serif;
-  font-style: normal;
-  font-weight: normal;
+.services-slogan {
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
-  line-height: 24px;
-  color: var(--basic-black);
+  margin: 0;
 }
 
-.delivery-section-desc {
-  font-family: "PT Sans", Arial, sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 13px;
-  line-height: 24px;
-  color: var(--basic-black);
+.services-points {
+  display: grid;
+  grid-template-columns: min-content 620px;
+  row-gap: 80px;
+  column-gap: 80px;
 }
-
-.slider-credit-list {
+.services-list {
+  margin: 0;
+  padding: 0;
   list-style: none;
+  position: relative;
 }
 
-.delivery-item-link,
-.guarantee-item-link,
-.credit-item-link {
+.services-list::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 279px;
+  background-image: url("../img/line.png");
+}
+
+.services-point {
+  display: none;
+}
+
+.services-item:not(:last-child) {
+  margin-bottom: 1px;
+}
+
+.services-name {
+  display: block;
+  width: 240px;
+  padding: 13.5px 10px 18.5px 22px;
+  background-color: var(--basic-nav);
+  box-shadow: 0px 1px 0px var(--basic-header), inset 0px 1px 0px #405069;
+  font-size: 21px;
+  line-height: 30px;
+  font-weight: 700;
   color: var(--basic-white);
-  font-style: normal;
-  font-weight: bold;
-  font-size: 21px;
+  transition: all 0.1s;
+}
+
+.services-name:hover {
+  cursor: pointer;
+  background-color: var(--basic-header);
+}
+
+.services-slider {
+  width: 620px;
+  height: 100%;
+  overflow: hidden;
+}
+.services-slides {
+  width: 300%;
+}
+.service {
+  float: left;
+  width: 620px;
+  height: 100%;
+}
+.service-delivery {
+  background-image: url("../img/car.png");
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+}
+.service-guarantee {
+  background-image: url("../img/guarantee.png");
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+}
+.service-credit {
+  background-image: url("../img/credit.png");
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+}
+.service-title {
+  font-size: 30px;
   line-height: 30px;
-}
-
-.delivery-item,
-.guarantee-item,
-.credit-item {
-  width: 240px;
-  height: 61px;
-  background: var(--basic-nav);
-  box-shadow: 0px 1px 0px #293449, inset 0px 1px 0px #405069;
-}
-
-.delivery-item:hover,
-.guarantee-item:hover,
-.credit-item:hover {
-  font-style: normal;
-  background: #293449;
-  box-shadow: 0px 1px 0px #293449, inset 0px 1px 0px #405069;
-  width: 240px;
-  height: 61px;
-}
-
-.delivery-item-link:hover,
-.guarantee-item-link:hover,
-.credit-item-link:hover {
-  font-style: normal;
-  font-weight: bold;
-  font-size: 21px;
-  line-height: 30px;
-  color: var(--basic-white);
-  width: 240px;
-  height: 61px;
-}
-
-.delivery-item:active,
-.guarantee-item:active,
-.credit-item:active {
-  font-style: normal;
-  font-weight: bold;
-  font-size: 21px;
-  line-height: 30px;
-  background-color: var(--basic-white);
-  width: 240px;
-  height: 61px;
-}
-
-.delivery-item-link:active,
-.guarantee-item-link:active,
-.credit-item-link:active {
-  font-style: normal;
-  font-weight: bold;
-  font-size: 21px;
-  line-height: 30px;
+  text-transform: uppercase;
   color: var(--basic-nav);
-  width: 240px;
-  height: 61px;
+  margin: 0 0 30px;
 }
+.service-slogan {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 13px;
+  margin: 0;
+}
+.service-slogan-credit {
+  margin-bottom: 26.5px;
+}
+.services-point {
+  display: none;
+}
+.services-point-delivery:checked ~ .services-list .services-name-delivery,
+.services-point-guarantee:checked ~ .services-list .services-name-guarantee,
+.services-point-credit:checked ~ .services-list .services-name-credit {
+  background-color: var(--basic-white);
+  color: var(--basic-nav);
+  box-shadow: 0px 1px 0px var(--basic-white);
+}
+.services-point-delivery:checked ~ .services-list .services-name-delivery:hover,
+.services-point-guarantee:checked
+  ~ .services-list
+  .services-name-guarantee:hover,
+.services-point-credit:checked ~ .services-list .services-name-credit:hover {
+  cursor: default;
+}
+
+.services-point-delivery:checked ~ .services-slider .services-slides {
+  transform: translate(0);
+}
+.services-point-guarantee:checked ~ .services-slider .services-slides {
+  transform: translate(-620px);
+}
+.services-point-credit:checked ~ .services-slider .services-slides {
+  transform: translate(-1240px);
+}
+
 .company-name-title {
   font-style: normal;
   font-weight: normal;
@@ -482,7 +535,7 @@ a {
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
-  display: flex;
+
   align-items: center;
   color: var(--special-text-footer-nav);
 }
@@ -499,21 +552,18 @@ a {
 }
 
 .footer-tool-link:hover {
-  display: flex;
   align-items: center;
   text-decoration-line: underline;
   color: var(--special-text-footer-yellow);
 }
 
 .footer-nav-link:hover {
-  display: flex;
   align-items: center;
   text-decoration-line: underline;
   color: #f1f5f7;
 }
 .footer-nav-link:active,
 .footer-tool-link:active {
-  display: flex;
   align-items: center;
   color: #f1f5f7;
   opacity: 0.5;
@@ -550,6 +600,37 @@ a {
   list-style: none;
 }
 
+.footer-social-link {
+  display: inline-block;
+  font-size: 0px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #212a3a;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.footer-social-link:hover {
+  background-color: var(--basic-logo);
+}
+
+.footer-social-link:active {
+  background-color: var(--basic-logo);
+}
+
+.link-vk {
+  background-image: url(../img/icons/icon-vk.svg);
+}
+
+.link-fb {
+  background-image: url(../img/icons/icon-fb.svg);
+}
+
+.link-inst {
+  background-image: url(../img/icons/icon-insta.svg);
+}
+
 .footer-bootom-feedback,
 .footer-bootom-developer {
   font-style: normal;
@@ -566,4 +647,15 @@ a {
   font-size: 16px;
   line-height: 18px;
   color: var(--special-text-footer-yellow);
+}
+
+.feedback-mail-link:active,
+.site-developer-link:active {
+  color: #ee3643;
+  text-decoration: none;
+}
+
+.feedback-mail-link:hover,
+.site-developer-link:hover {
+  text-decoration: underline;
 }
