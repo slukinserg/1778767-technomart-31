@@ -8,6 +8,7 @@
   --basic-form: #f7f3ec;
   --basic-white: #ffffff;
   --basic-products: #f9f5f0;
+  --basic-lightgray: #eaeaea;
 
   --special-materialserials: #ffbf47;
   --special-instruments: #3bbce3;
@@ -18,6 +19,8 @@
   --special-text-footer-nav: #f3f7f9;
   --special-text-footer-yellow: #ffd180;
   --special-border-products: #eaeaea;
+  --special-button-hover: #ca2c37;
+  --special-button-pressing: #ba2732;
 }
 
 * {
@@ -25,7 +28,7 @@
 }
 
 .page-body {
-  min-width: 1200px;
+  min-width: 960px;
   height: 100%;
   margin: 0px;
   padding: 0px;
@@ -41,11 +44,14 @@
   align-content: start;
 }
 
-.features-slider-list,
-.features-list,
-.container-products-list,
-.produsers-list,
-.credit-list,
+.visually-hidden {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
 .site-nav-list {
   list-style: none;
 }
@@ -54,9 +60,36 @@ a {
   text-decoration: none;
 }
 
+/*красные кнопки*/
+
+.button-link,
+.button-link:link,
+.button-link:visited {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--basic-white);
+  font-size: 14px;
+  line-height: 18px;
+  width: 192px;
+  height: 38px;
+  background-color: var(--basic-logo);
+}
+.button-link:hover {
+  background-color: var(--special-button-hover);
+  cursor: pointer;
+}
+.button-link:active {
+  background-color: var(--special-button-pressing);
+}
+
 .main-header {
   background-color: var(--basic-color);
 }
+
+/*Хэдер*/
 
 .main-header-top {
   background-color: var(--basic-header);
@@ -125,126 +158,157 @@ a {
   border: none;
 }
 
+/*Нижний хэдер*/
+
+.header-bottom {
+  width: 100%;
+  background-color: var(--basic-color);
+  padding-bottom: 60px;
+  margin-bottom: 59px;
+}
+
+.header-botton-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.site-nav {
+  width: 100%;
+}
+
 .site-nav-list {
-  font-size: 18px;
-  line-height: 24px;
+  height: 60px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
   background-color: var(--basic-nav);
 }
 
+.site-nav-item {
+  height: 100%;
+  flex-grow: 1;
+}
+
+.site-nav-link,
+.site-nav-link:link,
+.site-nav-link:visited {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: var(--basic-white);
+  text-decoration: none;
+  font-size: 18px;
+  transition: all 0.1s;
+}
+
 .site-nav-link:hover {
-  background: var(--basic-header);
-  box-shadow: inset 0px -5px 0px #293449;
+  background-color: var(--basic-header);
 }
 
 .site-nav-link:active {
-  background: #1d2739;
-  box-shadow: inset 0px -5px 0px #293449;
+  color: rgba(255, 255, 255, 0.5);
 }
 
-.visually-hidden {
-  background-color: gray;
+/*Категория услуг и товаров*/
+
+.main-features {
+  margin-bottom: 59px;
 }
 
-.features-title {
-  font-style: normal;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 30px;
-  color: var(--basic-white);
+.main-features-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 123px);
+  gap: 20px;
 }
-
-.button-features-link {
-  background-color: white;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 18px;
-  text-align: center;
-  width: 135px;
-  height: 38px;
-  text-transform: uppercase;
-  border: none;
-  opacity: 0.3;
+.features-slider {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 4;
 }
-
-.button-features-link:hover {
-  background: #c5c5c5;
-  opacity: 0.3;
-}
-
-.button-features-link:active {
-  background: #a9a9a9;
-  opacity: 0.3;
+.features-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 22px;
 }
 .features-item-materials {
   background-color: var(--special-materialserials);
-  width: 300px;
-  height: 123px;
 }
-
 .features-item-instruments {
   background-color: var(--special-instruments);
-  color: var(--basic-white);
-  width: 300px;
-  height: 123px;
 }
-
 .features-item-technics {
   background-color: var(--special-technics);
-  color: var(--basic-white);
-  width: 300px;
-  height: 123px;
 }
-
 .features-item-sale {
   background-color: var(--special-discounts);
-  color: var(--basic-white);
-  width: 300px;
-  height: 123px;
 }
-
 .features-item-delivery {
   background-color: var(--special-materialserials);
-  color: var(--basic-white);
-  width: 300px;
-  height: 123px;
 }
-
-.button-red-link {
-  font-style: normal;
-  font-weight: normal;
+.new-item {
+  position: relative;
+  overflow: hidden;
+}
+.new-item::after {
+  content: "new";
+  position: absolute;
+  display: flex;
+  width: 100px;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+  top: 7px;
+  right: -28px;
+  margin: 0;
+  transform: rotate(45deg);
+  color: var(--basic-white);
   background-color: var(--basic-logo);
+  text-transform: uppercase;
   font-size: 14px;
   line-height: 18px;
-  text-align: center;
-  text-transform: uppercase;
+}
+.features-title {
   color: var(--basic-white);
-  width: 192px;
+  margin: 0;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+.features-link,
+.features-link:link,
+.features-link:visited {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 135px;
   height: 38px;
-  border: none;
-}
-
-.features-slider-title {
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 36px;
-
-  align-items: center;
+  text-decoration: none;
+  color: var(--basic-white);
+  background-color: rgba(255, 255, 255, 0.3);
   text-transform: uppercase;
-  color: var(--basic-white);
-  background-color: gray;
+  font-size: 14px;
+  line-height: 18px;
+  transition: all 0.1s;
 }
-
-.slider-slogan-perforator,
-.slider-slogan-drill {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-
-  align-items: center;
-  color: var(--basic-white);
-  background-color: gray;
+.features-link:hover {
+  background-color: rgba(197, 197, 197, 0.3);
 }
+.features-link:active {
+  background-color: rgba(169, 169, 169, 0.3);
+}
+/*Слайдер*/
+
+/*Карточки товара*/
 
 .container-products-top {
   background-color: var(--basic-products);
@@ -255,27 +319,9 @@ a {
   font-weight: normal;
   font-size: 30px;
   line-height: 30px;
-
   align-items: center;
   text-transform: uppercase;
   color: var(--special-text);
-}
-
-.button-link {
-  background-color: var(--basic-logo);
-  font-size: 14px;
-  line-height: 18px;
-  font-style: normal;
-  text-align: center;
-  text-transform: uppercase;
-  color: var(--basic-white);
-}
-
-.button {
-  background-color: var(--basic-logo);
-  width: 192px;
-  height: 38px;
-  border: none;
 }
 
 .products-item-title {
@@ -327,11 +373,35 @@ a {
   border: 1px solid var(--special-border-products);
 }
 
-.produsers-item {
-  width: 220px;
-  height: 145px;
-  border: 1px solid var(--special-border-products);
+/*Популярные производители*/
+
+.produsers-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-auto-rows: 145px;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
+.produsers-item-link,
+.produsers-item-link:link,
+.produsers-item-link:visited {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--basic-lightgray);
+  transition: all 0.1s;
+}
+.produsers-item-link:hover {
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+}
+.produsers-item-link:active {
+  opacity: 0.5;
+}
+
 /*слайдер сервиса*/
 .main-services {
   width: 100%;
