@@ -32,10 +32,6 @@
   --social-background: #212a3a;
 }
 
-.page {
-  height: 100%;
-}
-
 * {
   box-sizing: border-box;
 }
@@ -58,10 +54,15 @@
 
 .visually-hidden {
   position: absolute;
-  clip: rect(0, 0, 0, 0);
   width: 1px;
   height: 1px;
   margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .container {
@@ -69,6 +70,7 @@
   margin: 0 auto;
   padding: 0 20px;
 }
+
 /*красные кнопки*/
 
 .button-link,
@@ -94,12 +96,11 @@
   background-color: var(--special-button-pressing);
 }
 
-.main-header {
-  background-color: var(--basic-color);
-}
-
 /*Хэдер*/
 
+.header {
+  margin-bottom: 59px;
+}
 .header-top {
   width: 100%;
   background-color: var(--basic-header);
@@ -275,12 +276,15 @@
 }
 
 /*Заголовок хэдэра*/
-.header-middle__title {
+
+.header-middle-title {
+  width: 197px;
+  height: 71px;
   font-style: italic;
   font-weight: 400;
   line-height: 23px;
   font-size: inherit;
-  color: var(--basic-red);
+  color: var(--basic-logo);
   margin: 0;
 }
 /*Контакты хэдера*/
@@ -321,17 +325,6 @@
   font-size: 14px;
   margin: 0;
   color: var(--basic-nav);
-}
-
-/*Заголовок хэдэра*/
-
-.header-middle-title {
-  font-style: italic;
-  font-weight: 400;
-  line-height: 23px;
-  font-size: inherit;
-  color: var(--basic-logo);
-  margin: 0;
 }
 
 /*Авторизация хэдера*/
@@ -398,6 +391,7 @@
 .header-botton-container {
   display: flex;
   justify-content: space-between;
+  padding-bottom: 60px;
 }
 
 .site-nav {
@@ -412,6 +406,8 @@
   display: flex;
   justify-content: space-around;
   background-color: var(--basic-nav);
+  background: #32425c;
+  box-shadow: inset 0px -5px 0px #293449;
 }
 
 .site-nav-item {
@@ -443,24 +439,77 @@
 /*Категория услуг и товаров*/
 
 .main-features {
+  width: 940px;
   margin-bottom: 59px;
 }
 
 .main-features-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 123px);
-  gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 20px 20px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "mat ins tech"
+    "slider slider sale"
+    "slider slider deliv";
+  padding-left: 0px;
 }
+
+.features-item-materials {
+  grid-area: mat;
+}
+
+.features-item-instruments {
+  grid-area: ins;
+}
+
+.features-item-technics {
+  grid-area: tech;
+}
+
+.features-item-sale {
+  grid-area: sale;
+}
+
+.features-item-delivery {
+  grid-area: deliv;
+}
+
 .features-slider {
+  grid-area: slider;
+}
+
+.features-item.features-slider {
+  padding: 0;
+}
+
+.features-slider-container {
+  height: 100%;
+}
+
+.instruments-container {
+  height: 100%;
+}
+
+.instruments-image {
+  height: 100%;
+}
+
+html,
+body,
+.main-features-list {
+  height: 100%;
+  margin: 0;
+}
+
+/*.features-slider {
   grid-column-start: 1;
   grid-column-end: 3;
   grid-row-start: 2;
   grid-row-end: 4;
-}
+}*/
+
 .features-item {
   display: flex;
   flex-direction: column;
@@ -785,6 +834,7 @@
 /*слайдер сервиса*/
 .main-services {
   width: 100%;
+  height: 522px;
   background-color: var(--basic-color);
   margin-bottom: 70px;
 }
@@ -810,6 +860,21 @@
   margin: 0;
 }
 
+.services-slogan.slogan-main {
+  width: 394px;
+  height: 49px;
+}
+
+.services-slogan.slogan-delivery {
+  width: 312px;
+  height: 99px;
+}
+
+.services-slogan.slogan-guarantee {
+  width: 312px;
+  height: 122px;
+}
+
 .services-points {
   display: grid;
   grid-template-columns: min-content 620px;
@@ -830,6 +895,8 @@
   width: 10px;
   height: 279px;
   background-image: url("../img/line.png");
+  top: -37px;
+  right: 0px;
 }
 
 .services-point {
@@ -893,13 +960,11 @@
   color: var(--basic-nav);
   margin: 0 0 30px;
 }
-.service-slogan {
-  font-family: "PT Sans", "Arial", sans-serif;
-  font-size: 13px;
-  margin: 0;
-}
+
 .service-slogan-credit {
   margin-bottom: 26.5px;
+  width: 280px;
+  height: 63px;
 }
 .services-point {
   display: none;
@@ -1043,7 +1108,7 @@
 
 .footer-top {
   background-color: var(--basic-nav);
-  padding-bottom: 54px;
+  height: 193px;
 }
 
 .footer-top-container {
@@ -1111,20 +1176,33 @@
 
 .footer-bottom {
   background-color: var(--basic-header);
+  height: 107px;
+}
+
+.container-footer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 100%;
 }
 
 .footer-bottom-container {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-top: 34px;
-  padding-bottom: 29px;
-  position: relative;
+}
+
+.footer-social-container {
+  padding-right: 40px;
 }
 
 .footer-copy-desc {
   line-height: 18px;
   color: var(--basic-white);
+  width: 333px;
+  height: 49;
 }
 
 .social {
@@ -1132,9 +1210,6 @@
   padding: 0;
   list-style: none;
   display: flex;
-  position: absolute;
-  left: calc(50% - 14px);
-  transform: translate(-50%);
 }
 
 .footer-social-item:not(:last-child) {
@@ -1172,10 +1247,6 @@
   background-image: url("../img/icons/icon-insta.svg");
 }
 
-.footer-bottom-container {
-  display: flex;
-}
-
 .footer-contacts-info {
   color: var(--basic-white);
   line-height: 18px;
@@ -1184,10 +1255,6 @@
 
 .footer-contacts-info:not(:last-child) {
   margin-right: 51px;
-}
-
-.footer-contacts-info:last-child {
-  margin-right: 13px;
 }
 
 .footer-contacts-link,
