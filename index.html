@@ -11,7 +11,7 @@
     <header class="header">
       <section class="header-top">
         <div class="header-top-container container">
-          <a class="link logo" href="#">
+          <a class="logo" href="#">
             <img
               src="img/logo-technomart.svg"
               width="108"
@@ -19,35 +19,75 @@
               alt="Логотип магазина"
             />
           </a>
-          <form class="search" method="get" action="https://echo.htmlacademy.ru">
+          <form
+            class="search"
+            method="get"
+            action="https://echo.htmlacademy.ru"
+          >
             <input
               class="search-input"
-              type="search"
+              type="text"
               placeholder="Поиск:"
               id="search"
               name="search"
+              autocomplete="off"
             />
             <label class="search-label" for="search">
-              <svg class="search-icon" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.458 12.044L17 15.586L15.586 17L12.044 13.458C10.782 14.421 9.21 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309 14.4581 10.7403 13.458 12.044ZM7.5 2C4.467 2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967 7.5 13C10.532 13 13 10.532 13 7.5C13 4.467 10.532 2 7.5 2Z"/>
-                </svg>
+              <svg
+                class="search-icon"
+                width="17"
+                height="17"
+                viewBox="0 0 17 17"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M13.458 12.044L17 15.586L15.586 17L12.044 13.458C10.782 14.421 9.21 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309 14.4581 10.7403 13.458 12.044ZM7.5 2C4.467 2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967 7.5 13C10.532 13 13 10.532 13 7.5C13 4.467 10.532 2 7.5 2Z"
+                />
+              </svg>
             </label>
           </form>
           <ul class="header-top-list">
             <li class="header-top-item">
               <a class="header-top-item-link" href="#">
-                <svg class="header-top-item-icon" width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M14 15C14 15.55 13.632 15.741 13.182 15.426L7.819 11.661C7.369 11.346 6.632 11.346 6.182 11.661L0.818 15.426C0.368 15.741 0 15.55 0 15V1C0 0.45 0.45 0 1 0H13C13.55 0 14 0.45 14 1V15Z"/>
-                  </svg>Закладки : 0
+                <svg
+                  class="header-top-item-icon"
+                  width="14"
+                  height="16"
+                  viewBox="0 0 14 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M14 15C14 15.55 13.632 15.741 13.182 15.426L7.819 11.661C7.369 11.346 6.632 11.346 6.182 11.661L0.818 15.426C0.368 15.741 0 15.55 0 15V1C0 0.45 0.45 0 1 0H13C13.55 0 14 0.45 14 1V15Z"
+                  />
+                </svg>
+                Закладки : 0
               </a>
             </li>
             <li class="header-top-item">
-              <a class="header-top-item-link" href="#">
-                <svg class="header-top-item-icon" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M4.5 15C5.32843 15 6 14.3284 6 13.5C6 12.6716 5.32843 12 4.5 12C3.67157 12 3 12.6716 3 13.5C3 14.3284 3.67157 15 4.5 15Z"/>
-                  <path d="M12.5 15C13.3284 15 14 14.3284 14 13.5C14 12.6716 13.3284 12 12.5 12C11.6716 12 11 12.6716 11 13.5C11 14.3284 11.6716 15 12.5 15Z"/>
-                  <path d="M15 2H4.07L3.648 0H0V2H2.031L4.016 11H15V9H9.441L15 6.951V2Z"/>
-                  </svg>Корзина: 0</a
+              <a class="header-top-item-link basket-active" href="#">
+                <svg
+                  class="header-top-item-icon"
+                  width="15"
+                  height="15"
+                  viewBox="0 0 15 15"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M4.5 15C5.32843 15 6 14.3284 6 13.5C6 12.6716 5.32843 12 4.5 12C3.67157 12 3 12.6716 3 13.5C3 14.3284 3.67157 15 4.5 15Z"
+                  />
+                  <path
+                    d="M12.5 15C13.3284 15 14 14.3284 14 13.5C14 12.6716 13.3284 12 12.5 12C11.6716 12 11 12.6716 11 13.5C11 14.3284 11.6716 15 12.5 15Z"
+                  />
+                  <path
+                    d="M15 2H4.07L3.648 0H0V2H2.031L4.016 11H15V9H9.441L15 6.951V2Z"
+                  />
+                </svg>
+                Корзина: 0</a
               >
             </li>
             <li class="header-top-item">
@@ -60,9 +100,11 @@
       </section>
       <section class="header-middle">
         <div class="header-middle-container container">
-          <div class="header-middle-title">
-            Интернет-магазин строительных материалов и инструментов для ремонта
-        </div>
+          <p class="header-middle-title">
+            Интернет-магазин <br />
+            строительных материалов <br />
+            и инструментов для ремонта
+          </p>
           <div class="header-middle-contacts">
             <a class="header-phone-link" href="tel:+78005558628"
               >+7 800 555-86-28
@@ -76,10 +118,22 @@
               class="header-middle-authorization sign-button signin-button"
               href="#"
             >
-            <svg class="signin-button-icon" width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M14.1667 8.5L5.71429 0V6H0V11H5.71429V17L14.1667 8.5Z"/>
-              <path d="M16.1771 15.01H11.3895V17H16.1771C18.2514 17 19.0381 15.19 19.0619 13.974V3.028C19.0381 1.811 18.2514 0 16.1771 0H11.3895V1.99H16.1771C16.9762 1.99 17.1219 2.671 17.1391 3.047V13.951C17.1229 14.327 16.9762 15.01 16.1771 15.01Z"/>
-              </svg>Войти
+              <svg
+                class="signin-button-icon"
+                width="20"
+                height="17"
+                viewBox="0 0 20 17"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M14.1667 8.5L5.71429 0V6H0V11H5.71429V17L14.1667 8.5Z"
+                />
+                <path
+                  d="M16.1771 15.01H11.3895V17H16.1771C18.2514 17 19.0381 15.19 19.0619 13.974V3.028C19.0381 1.811 18.2514 0 16.1771 0H11.3895V1.99H16.1771C16.9762 1.99 17.1219 2.671 17.1391 3.047V13.951C17.1229 14.327 16.9762 15.01 16.1771 15.01Z"
+                />
+              </svg>
+              Войти
             </a>
             <a
               class="header-middle-authorization sign-button signup-button"
@@ -89,105 +143,147 @@
             </a>
           </div>
         </div>
-          <div class="header-bottom-container container">
-            <nav class="site-nav">
-              <ul class="site-nav-list">
-                <li class="site-nav-item">
-                  <a class="site-nav-link" href="#">Главная</a>
-                </li>
-                <li class="site-nav-item">
-                  <a class="site-nav-link" href="#">Компания</a>
-                </li>
-                <li class="site-nav-item">
-                  <a class="site-nav-link" href="catalog.html">Каталог</a>
-                </li>
-                <li class="site-nav-item">
-                  <a class="site-nav-link" href="#">Новости</a>
-                </li>
-                <li class="site-nav-item">
-                  <a class="site-nav-link" href="#">Спецпредложения</a>
-                </li>
-                <li class="site-nav-item">
-                  <a class="site-nav-link" href="#">Доставка</a>
-                </li>
-                <li class="site-nav-item">
-                  <a class="site-nav-link" href="#">Контакты</a>
-                </li>
-              </ul>
-            </nav>
-          </div>
+        <div class="header-bottom-container container">
+          <nav class="site-nav">
+            <ul class="site-nav-list">
+              <li class="site-nav-item">
+                <a class="site-nav-link" href="#">Главная</a>
+              </li>
+              <li class="site-nav-item">
+                <a class="site-nav-link" href="#">Компания</a>
+              </li>
+              <li class="site-nav-item">
+                <a class="site-nav-link" href="catalog.html">Каталог</a>
+              </li>
+              <li class="site-nav-item">
+                <a class="site-nav-link" href="#">Новости</a>
+              </li>
+              <li class="site-nav-item">
+                <a class="site-nav-link" href="#">Спецпредложения</a>
+              </li>
+              <li class="site-nav-item">
+                <a class="site-nav-link" href="#">Доставка</a>
+              </li>
+              <li class="site-nav-item">
+                <a class="site-nav-link" href="#">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </section>
     </header>
     <main>
-        <section class="main-features container">
-          <h1 class="visually-hidden">Интернет-магазин Техномарт</h1>
-          <ul class="main-features-list">
-            <li class="features-item features-item-materials new-item">
-              <h2 class="features-title">Материалы</h2>
-              <a class="features-link" href="#"> На любой вкус </a>
-            </li>
-            <li class="features-item features-item-instruments">
-              <h2 class="features-title">Инструмент</h2>
-              <a class="features-link" href="#"> На все случаи </a>
-            </li>
-            <li class="features-item features-item-technics">
-              <h2 class="features-title">Техника</h2>
-              <a class="features-link" href="#"> Для стройки </a>
-            </li>
-            <li class="features-item features-item-sale">
-              <h2 class="features-title">Скидка 50%</h2>
-              <a class="features-link" href="#"> На 350 товаров </a>
-            </li>
-            <li class="features-item features-item-delivery">
-              <h2 class="features-title">Доставка</h2>
-              <a class="features-link" href="#"> Бесплатно </a>
-            </li>
-            <li class="features-item features-slider">
-              <div class="features-slider-container">
-                <div class="instruments-container">
-                  <!--<h2 class="features-slider-title">Перфораторы</h2>-->
-                  <img
-                    class="instruments-image"
-                    src="img/content/perforator.jpg"
-                    width="620"
-                    height="266"
-                    alt="Перфораторы"
-                  />
-                  <!--
-                  <p class="slider-slogan-perforator">
-                    Настоящие мужские игрушки
-                  </p>
+      <section class="main-features container">
+        <h1 class="visually-hidden">Интернет-магазин Техномарт</h1>
+        <ul class="main-features-list">
+          <li class="features-item features-item-materials new-item">
+            <h2 class="features-title">Материалы</h2>
+            <a class="features-link" href="#"> На любой вкус </a>
+          </li>
+          <li class="features-item features-item-instruments">
+            <h2 class="features-title">Инструмент</h2>
+            <a class="features-link" href="#"> На все случаи </a>
+          </li>
+          <li class="features-item features-item-technics">
+            <h2 class="features-title">Техника</h2>
+            <a class="features-link" href="#"> Для стройки </a>
+          </li>
+          <li class="features-item features-item-sale">
+            <h2 class="features-title">Скидка 50%</h2>
+            <a class="features-link" href="#"> На 350 товаров </a>
+          </li>
+          <li class="features-item features-item-delivery">
+            <h2 class="features-title">Доставка</h2>
+            <a class="features-link" href="#"> Бесплатно </a>
+          </li>
+          <li class="features-item feature-slider">
+            <article class="feature-slider-container">
+              <div class="feature-slider-slides">
+                <div
+                  class="
+                    feature-slider-item
+                    feature-slider-item-visible
+                    feature-slider-item-perforator
+                  "
+                >
+                  <h2 class="feature-slider-title">Перфораторы</h2>
+                  <p class="feature-slider-slogan">Настоящие мужские игрушки</p>
                   <a
-                    class="slider-item-perforator catalog-perforator-link"
+                    class="feature-slider-catalog button-link"
                     href="catalog.html"
+                    >Открыть каталог</a
                   >
-                    <a class="button-link" type="button"> Открыть каталог </a>
-                  </a>-->
                 </div>
-                <!--<div class="instruments-container">
-                  <h2 class="features-slider-title">Дрели</h2>
-                  <img
-                    class="instruments-image"
-                    src="img/content/drill.jpg"
-                    width="620"
-                    height="266"
-                    alt="Дрели"
-                  />
-                  <p class="slider-slogan-drill">Соседям на радость!</p>
-                  <a href="catalog.html">
-                    <a class="button-link" type="button"> Открыть каталог </a>
-                  </a>
-                </div>-->
+                <div class="feature-slider-item feature-slider-item-drill">
+                  <h3 class="feature-slider-title">Дрели</h3>
+                  <p class="feature-slider-slogan">Соседям на радость!</p>
+                  <a
+                    class="feature-slider-catalog button-link"
+                    href="catalog.html"
+                    >Открыть каталог</a
+                  >
+                </div>
+                <div class="feature-slider-arrows">
+                  <button
+                    class="feature-slider-arrow feature-slider-arrow-prev"
+                    type="button"
+                  >
+                    <svg
+                      class="features-slider-arrow-icon"
+                      width="22"
+                      height="40"
+                      viewBox="0 0 22 40"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M19.9244 0.941406L21.9225 2.98921L4.90696 20.436L21.978 37.9375L19.9789 39.9853L0.910614 20.436L19.9244 0.941406Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </button>
+                  <button
+                    class="feature-slider-arrow feature-slider-arrow-next"
+                    type="button"
+                  >
+                    <svg
+                      class="features-slider-arrow-icon"
+                      width="22"
+                      height="40"
+                      viewBox="0 0 22 40"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M2.07568 39.0586L0.0775054 37.0108L17.0931 19.564L0.0220266 2.06249L2.02116 0.0146899L21.0894 19.564L2.07568 39.0586Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div class="feature-slider-controls">
+                  <button
+                    class="
+                      feature-slider-control
+                      feature-slider-control-active
+                      feature-slider-control-first
+                    "
+                  >
+                    <span class="visually-hidden">Первый слайд</span>
+                  </button>
+                  <button
+                    class="feature-slider-control feature-slider-control-second"
+                  >
+                    <span class="visually-hidden">Второй слайд</span>
+                  </button>
+                </div>
               </div>
-            </li>
-          </ul>
-        </section>
+            </article>
+          </li>
+        </ul>
+      </section>
 
-
-
-
-
-        <!--<section class="main-features">
+      <!--<section class="main-features">
           <h2 class="visually-hidden">Категории услуг и товаров</h2>
           <ul class="main-features-list">
             <li class="features-item features-item-materials new-item">
@@ -248,9 +344,9 @@
                   </a>
                 </section>
               </article>
-            </li>-->
+            </li>
           </ul>
-        </section>
+        </section>-->
 
       <div class="container">
         <section class="popular-products popular">
@@ -480,8 +576,7 @@
           <div class="services-header">
             <h3 class="services-title">Сервисы</h3>
             <p class="services-slogan slogan-main">
-              Хороший интернет-магазин отличается от плохого не только
-              ценами!
+              Хороший интернет-магазин отличается от плохого не только ценами!
               Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
             </p>
           </div>
@@ -536,25 +631,25 @@
                     <h3 class="service-title">Доставка</h3>
                     <p class="services-slogan slogan-delivery">
                       Мы с удовольствием доставим ваш товар прямо к вашему
-                      подъезду совершенно бесплатно! Ведь мы неплохо
-                      заработаем, поднимая его на ваш этаж!
+                      подъезду совершенно бесплатно! Ведь мы неплохо заработаем,
+                      поднимая его на ваш этаж!
                     </p>
                   </div>
                   <div class="service service-guarantee">
                     <h3 class="service-title">Гарантия</h3>
                     <p class="services-slogan slogan-guarantee">
-                      Если купленный у нас товар поломается или заискрит,
-                      а также в случае пожара, спровоцированного его
-                      возгоранием, вы всегда можете быть уверены в нашей
-                      гарантии. Мы обменяем сгоревший товар на новый.
-                      Дом уж восстановите как-нибудь сами.
+                      Если купленный у нас товар поломается или заискрит, а
+                      также в случае пожара, спровоцированного его возгоранием,
+                      вы всегда можете быть уверены в нашей гарантии. Мы
+                      обменяем сгоревший товар на новый. Дом уж восстановите
+                      как-нибудь сами.
                     </p>
                   </div>
                   <div class="service service-credit">
                     <h3 class="service-title">Кредит</h3>
                     <p class="services-slogan service-slogan-credit">
-                      Залезть в долговую яму стало проще! Кредитные
-                      консультанты придут вам на помощь.
+                      Залезть в долговую яму стало проще! Кредитные консультанты
+                      придут вам на помощь.
                     </p>
                     <a class="button-link" href="#">Отправить заявку</a>
                   </div>
@@ -617,9 +712,8 @@
         <div class="container footer-top-container">
           <div class="footer-top-logo">
             <h2 class="visually-hidden">Адрес магазина</h2>
-            <a class="link logo footer-logo" type="image">
+            <a class="logo footer-logo" type="image">
               <img
-                class="footer-logo-image"
                 src="img/shape-logo-footer.svg"
                 alt="Логотип магазина"
                 width="138px"
@@ -692,8 +786,7 @@
           <div class="footer-bottom-container">
             <h2 class="visually-hidden">Юридическая информация</h2>
             <p class="footer-copy-desc">
-              © 2010–2021 Компания «Техномарт»
-              Все права защищены
+              © 2010–2021 Компания «Техномарт» Все права защищены
             </p>
           </div>
           <div class="footer-social-container">
@@ -727,5 +820,103 @@
         </div>
       </section>
     </footer>
+    <!--<section class="popup contact-popup">
+      <h2 class="visually-hidden">Связаться с нами</h2>
+      <form
+        class="contact-popup-form"
+        method="post"
+        action="https://echo.htmlacademy.ru"
+      >
+        <div class="contact-popup-input-container">
+          <div class="contact-popup-item">
+            <label class="contact-popup-label" for="name-contact"
+              >Ваше имя:</label
+            >
+            <br />
+            <input
+              class="contact-popup-input contact-popup-input-name"
+              id="name-contact"
+              type="text"
+              name="name"
+              placeholder="Имя Фамилия"
+              required
+            />
+          </div>
+          <div class="contact-popup-item">
+            <label class="contact-popup-label" for="email-contact"
+              >Ваш e-mail:</label
+            >
+            <br />
+            <input
+              class="contact-popup-input contact-popup-input-email"
+              id="email-contact"
+              type="email"
+              name="email"
+              placeholder="email@example.com"
+              required
+            />
+          </div>
+          <div class="contact-popup-item contact-popup-item-question">
+            <label class="contact-popup-label" for="question-contact"
+              >Текст письма:</label
+            >
+            <br />
+            <textarea
+              class="contact-popup-input contact-popup-input-question"
+              id="question-contact"
+              name="question"
+              placeholder="В свободной форме"
+              required
+            ></textarea>
+          </div>
+        </div>
+        <div class="contact-popup-button-container">
+          <button class="contact-popup-button button-link" type="submit">
+            Отправить
+          </button>
+        </div>
+      </form>
+      <button
+        class="contact-popup-close close-button close-popup"
+        type="button"
+      >
+        <span class="visually-hidden">Закрыть</span>
+      </button>
+    </section>
+    <section class="popup map-popup">
+      <h2 class="visually-hidden">Как нас найти</h2>
+      <iframe
+        class="map"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1996.8301744005787!2d30.31430331609816!3d59.96814048188694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696315bcebbd7f3%3A0xe0d833dfef898281!2z0L3QsNCxLiBQ0LXQutC4INCa0LDRgNC_0L7QstC60LgsIDUsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTcwMjI!5e0!3m2!1sru!2sru!4v1622217120341!5m2!1sru!2sru"
+        width="943"
+        height="449"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+      ></iframe>
+      <button class="map-popup-close close-button close-popup" type="button">
+        <span class="visually-hidden">Закрыть окно</span>
+      </button>
+    </section>-->
+    <section class="popup order-popup">
+      <h2 class="visually-hidden">Товар добавлен в корзину</h2>
+      <div class="order-popup-slogan-container">
+        <p class="order-popup-slogan">Товар добавлен в корзину!</p>
+      </div>
+      <div class="order-popup-buttons">
+        <a class="order-popup-pay-button button-link" href="#"
+          >Оформить заказ</a
+        >
+        <button
+          class="order-popup-close-button button-link button-white close-popup"
+          type="button"
+        >
+          Продолжить покупки
+        </button>
+      </div>
+      <button class="order-popup-close close-button close-popup" type="button">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
+    </section>
   </body>
 </html>
