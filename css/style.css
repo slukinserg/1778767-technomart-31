@@ -94,7 +94,9 @@
   --catalog-checker: #b5b5b5;
 }
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -1129,6 +1131,7 @@
   width: 280px;
   height: 63px;
 }
+
 .services-point {
   display: none;
 }
@@ -1628,6 +1631,46 @@
 
 .popup {
   display: none;
+}
+
+@keyframes popup-visible {
+  from {
+    transform: translate(0, -100px);
+    opacity: 0.5;
+  }
+  to {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+.popup-visible {
+  display: block;
+  animation-name: popup-visible;
+  animation-duration: 0.1s;
+}
+
+/*Попап форма*/
+.page-overflow {
+  overflow: hidden scroll;
+  position: fixed;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+.popup-container {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.popup-container--visible {
+  display: block;
 }
 
 /*----Страница каталога----------------------------*/
