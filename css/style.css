@@ -316,11 +316,6 @@
   opacity: 0.5;
 }
 
-.checkout {
-  background-color: var(--basic-checkout);
-  /*text-align: -webkit-left;*/
-}
-
 .header-top-item-link:nth-last-child(1) {
   padding-left: 21px;
 }
@@ -332,6 +327,11 @@
 .checkout:active {
   background-color: var(--basic-checkout);
   color: rgba(255, 255, 255, 0.5);
+}
+
+.header-top-item-link.checkout {
+  background-color: var(--basic-checkout);
+  padding-left: 10px;
 }
 
 /*Средний хэдэр*/
@@ -364,19 +364,17 @@
 
 .header-middle-contacts {
   text-align: center;
-  /*margin-right: 12px;*/
+  margin-left: 24px;
 }
 
 .header-phone-link,
 .header-phone-link:link,
 .header-phone-link:visited {
   display: block;
-  position: relative;
-  left: 12px;
   width: 270px;
   min-height: 45px;
-  padding-left: 47px;
-  padding-top: 5px;
+  padding-left: 26px;
+  padding-top: 4px;
   border: 3px solid var(--basic-white);
   text-decoration: none;
   color: var(--basic-logo);
@@ -389,8 +387,8 @@
 .header-phone-link::before {
   position: absolute;
   content: "";
-  left: 37px;
-  top: 10px;
+  left: 380px;
+  top: 59px;
   width: 19px;
   height: 19px;
   margin-right: 16px;
@@ -464,11 +462,11 @@
 }
 
 .site-nav-list {
+  padding: 0 26px;
   flex-wrap: wrap;
   min-height: 60px;
   list-style: none;
   margin: 0;
-  padding: 0;
   display: flex;
   background-color: var(--basic-nav);
   background: var(--basic-nav);
@@ -477,7 +475,6 @@
 
 .site-nav-item {
   height: 100%;
-  flex-grow: 1;
 }
 
 .site-nav-link,
@@ -486,7 +483,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 16px 10px;
+  padding: 16px 28px;
   height: 100%;
   color: var(--basic-white);
   text-decoration: none;
@@ -802,10 +799,9 @@
 .products-title-catalog {
   padding: 25px 14px 26px 28px;
   background-color: var(--basic-color);
-  margin-bottom: 20px;
   margin-top: 20px;
   color: var(--basic-nav);
-  font-size: 30px;
+  font-size: 29px;
   line-height: 30px;
   text-transform: uppercase;
 }
@@ -831,6 +827,7 @@
 
 .card-item {
   width: 220px;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -922,6 +919,7 @@
   border-bottom-left-radius: 3px;
   position: relative;
   padding-left: 5px;
+  margin-left: -5px;
 }
 
 .last-price::after {
@@ -1722,7 +1720,7 @@
 }
 
 .header-catalog {
-  margin-bottom: 21px;
+  margin-bottom: 18px;
 }
 
 /*Каталог*/
@@ -1750,10 +1748,12 @@
 .breadcrumbs-list {
   list-style: none;
   margin: 0;
-  padding: 0;
+  /* padding: 0; */
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
+  /* margin-right: -11px; */
+  margin-left: -41px;
 }
 .breadcrumbs-item:not(:last-child)::after {
   display: inline-block;
@@ -1761,7 +1761,7 @@
   width: 8px;
   height: 12px;
   background-image: url("../img/icons/arrow-breadcrumbs.svg");
-  margin: 0 17px;
+  margin: 0 15px;
 }
 
 .breadcrumbs-item .breadcrumbs-icon-home {
@@ -1944,7 +1944,7 @@ input::-webkit-inner-spin-button {
 }
 .filter-section-maker {
   padding-bottom: 26px;
-  margin-bottom: 18px;
+  margin-bottom: 17px;
 }
 .filter-section-mains {
   padding-bottom: 17px;
@@ -1961,8 +1961,8 @@ input::-webkit-inner-spin-button {
 }
 
 .filter-title-price {
-  padding-top: 16px;
-  padding-bottom: 11px;
+  padding-top: 13px;
+  padding-bottom: 15px;
 }
 
 .price-title-maker {
@@ -1970,7 +1970,7 @@ input::-webkit-inner-spin-button {
 }
 
 .price-title-mains {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .checkbox-manufacturers-list,
@@ -2063,9 +2063,9 @@ input::-webkit-inner-spin-button {
 }
 
 .range-controls {
-  padding: 29px 18px;
+  padding: 35px 18px;
   background-color: var(--catalog-filter);
-  margin-bottom: 9px;
+  margin-bottom: 13px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2153,7 +2153,7 @@ input::-webkit-inner-spin-button {
 
 .sorting-list-buttons {
   width: 55%;
-  margin-right: 46px;
+  margin-right: 43px;
 }
 
 .filters-title-text {
@@ -2215,7 +2215,7 @@ input::-webkit-inner-spin-button {
 }
 
 .sorting-item-order:not(:last-child) {
-  margin-right: 21px;
+  margin-right: 18px;
 }
 
 .sorting-icon {
@@ -2246,6 +2246,9 @@ input::-webkit-inner-spin-button {
   padding: 0;
 }
 
+.pagination-item {
+  margin-top: 18px;
+}
 .pagination-item:not(:last-child) {
   margin-right: 10px;
 }
