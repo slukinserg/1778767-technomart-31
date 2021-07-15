@@ -131,9 +131,9 @@
 }
 
 .container {
-  max-width: 980px;
+  max-width: 960px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 10px;
 }
 
 /*красные кнопки*/
@@ -771,7 +771,7 @@
 }*/
 
 .popular-products {
-  margin-bottom: 51px;
+  margin-bottom: 71px;
 }
 
 .main-producers {
@@ -806,23 +806,19 @@
 }
 
 .popular-products-list {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 220px 220px 220px 220px;
+  gap: 20px;
+  /* flex-wrap: wrap; */
   list-style: none;
   margin: 0;
   padding: 0;
-  margin-right: -20px;
+  /* margin-right: -20px;*/
 }
 
-.popular-products-item {
-  display: flex;
+/*.popular-products-item:not(:last-child) {
   margin-right: 20px;
-  margin-bottom: 20px;
-}
-
-.popular-products-item:not(:last-child) {
-  margin-right: 20px;
-}
+}*/
 
 .card-item {
   width: 220px;
