@@ -358,12 +358,13 @@
   font-size: inherit;
   color: var(--basic-logo);
   margin: 0;
+  margin-left: -10px;
 }
 /*Контакты хэдера*/
 
 .header-middle-contacts {
   text-align: center;
-  margin-left: 24px;
+  margin-left: 25px;
 }
 
 .header-phone-link,
@@ -386,7 +387,7 @@
 .header-phone-link::before {
   position: absolute;
   content: "";
-  left: 380px;
+  left: 368px;
   top: 59px;
   width: 19px;
   height: 19px;
@@ -429,6 +430,7 @@
 .signup-button {
   width: 150px;
   height: 45px;
+  margin-right: -10px;
 }
 
 .signin-button-icon {
@@ -1816,7 +1818,7 @@
   display: flex;
   align-items: center;
   max-width: 300px;
-  padding: 12px 10px 12px 15px;
+  padding: 12px 0px 12px 15px;
   color: var(--basic-black);
   text-decoration: none;
   transition: all 0.1s;
