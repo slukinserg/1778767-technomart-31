@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <title>HTML Academy: Техномарт</title>
     <link rel="stylesheet" href="css/normalize.css" />
-    <link href="css/style.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
     <link rel="icon" href="favicon.ico" />
   </head>
   <body class="page-body">
@@ -298,7 +298,9 @@
                   <img
                     class="button-pay-icon-cart"
                     src="img/icons/icon-cart.svg"
-                    alt=""
+                    alt="Добавить товар в корзину"
+                    width="15"
+                    height="15"
                   />Купить
                 </a>
                 <a class="card-item-button-bookmark button-bookmark" href="#"
@@ -328,7 +330,9 @@
                   <img
                     class="button-pay-icon-cart"
                     src="img/icons/icon-cart.svg"
-                    alt=""
+                    alt="Добавить товар в корзину"
+                    width="15"
+                    height="15"
                   />Купить
                 </a>
                 <a class="card-item-button-bookmark button-bookmark" href="#"
@@ -358,7 +362,9 @@
                   <img
                     class="button-pay-icon-cart"
                     src="img/icons/icon-cart.svg"
-                    alt=""
+                    alt="Добавить товар в корзину"
+                    width="15"
+                    height="15"
                   />Купить
                 </a>
                 <a class="card-item-button-bookmark button-bookmark" href="#"
@@ -388,7 +394,9 @@
                   <img
                     class="button-pay-icon-cart"
                     src="img/icons/icon-cart.svg"
-                    alt=""
+                    alt="Добавить товар в корзину"
+                    width="15"
+                    height="15"
                   />Купить
                 </a>
                 <a class="card-item-button-bookmark button-bookmark" href="#"
@@ -396,7 +404,7 @@
                 >
               </div>
               <s class="old-price">22500 Р.</s>
-              <a class="last-price" href="#">15500 Р.</a>
+              <a class="last-price" href="#">12500 Р.</a>
             </article>
           </li>
         </ul>
@@ -440,7 +448,7 @@
           <li class="produsers-item">
             <a class="produsers-item-link" href="#">
               <img
-                src="img/content/brands/Inter.png"
+                src="img/content/brands/inter.png"
                 width="200"
                 height="76"
                 alt="Интерскол"
@@ -500,82 +508,86 @@
             </p>
           </div>
           <div class="services-info">
-            <div class="services-points">
-              <input
-                class="services-point services-point-delivery"
-                type="radio"
-                name="service-info"
-                value="delivery"
-                id="delivery"
-                checked
-              />
-              <input
-                class="services-point services-point-guarantee"
-                type="radio"
-                name="service-info"
-                value="guarantee"
-                id="guarantee"
-              />
-              <input
-                class="services-point services-point-credit"
-                type="radio"
-                name="service-info"
-                value="credit"
-                id="credit"
-              />
-              <ul class="services-list">
-                <li class="services-item">
-                  <label
-                    class="services-name services-name-delivery"
-                    for="delivery"
-                    >Доставка</label
-                  >
-                </li>
-                <li class="services-item">
-                  <label
-                    class="services-name services-name-guarantee"
-                    for="guarantee"
-                    >Гарантия</label
-                  >
-                </li>
-                <li class="services-item">
-                  <label class="services-name services-name-credit" for="credit"
-                    >Кредит</label
-                  >
-                </li>
-              </ul>
-              <div class="services-slider">
-                <div class="services-slides">
-                  <div class="service service-delivery">
-                    <h3 class="service-title">Доставка</h3>
-                    <p class="services-slogan slogan-delivery">
-                      Мы с удовольствием доставим ваш товар прямо к вашему
-                      подъезду совершенно бесплатно! Ведь мы неплохо
-                      заработаем,<br />
-                      поднимая его на ваш этаж!
-                    </p>
-                  </div>
-                  <div class="service service-guarantee">
-                    <h3 class="service-title">Гарантия</h3>
-                    <p class="services-slogan slogan-guarantee">
-                      Если купленный у нас товар поломается или заискрит, а
-                      также в случае пожара, спровоцированного его возгоранием,
-                      вы всегда можете быть уверены в нашей гарантии. Мы
-                      обменяем сгоревший товар на новый. Дом уж восстановите
-                      как-нибудь сами.
-                    </p>
-                  </div>
-                  <div class="service service-credit">
-                    <h3 class="service-title">Кредит</h3>
-                    <p class="services-slogan service-slogan-credit">
-                      Залезть в долговую яму стало проще! Кредитные консультанты
-                      придут вам на помощь.
-                    </p>
-                    <a class="button-link" href="#">Отправить заявку</a>
+            <form action="https://echo.htmlacademy.ru">
+              <div class="services-points">
+                <input
+                  class="services-point services-point-delivery"
+                  type="radio"
+                  name="service-info"
+                  value="delivery"
+                  id="delivery"
+                  checked
+                />
+                <input
+                  class="services-point services-point-guarantee"
+                  type="radio"
+                  name="service-info"
+                  value="guarantee"
+                  id="guarantee"
+                />
+                <input
+                  class="services-point services-point-credit"
+                  type="radio"
+                  name="service-info"
+                  value="credit"
+                  id="credit"
+                />
+                <ul class="services-list">
+                  <li class="services-item">
+                    <label
+                      class="services-name services-name-delivery"
+                      for="delivery"
+                      >Доставка</label
+                    >
+                  </li>
+                  <li class="services-item">
+                    <label
+                      class="services-name services-name-guarantee"
+                      for="guarantee"
+                      >Гарантия</label
+                    >
+                  </li>
+                  <li class="services-item">
+                    <label
+                      class="services-name services-name-credit"
+                      for="credit"
+                      >Кредит</label
+                    >
+                  </li>
+                </ul>
+                <div class="services-slider">
+                  <div class="services-slides">
+                    <div class="service service-delivery">
+                      <h3 class="service-title">Доставка</h3>
+                      <p class="services-slogan slogan-delivery">
+                        Мы с удовольствием доставим ваш товар прямо к вашему
+                        подъезду совершенно бесплатно! Ведь мы неплохо
+                        заработаем,<br />
+                        поднимая его на ваш этаж!
+                      </p>
+                    </div>
+                    <div class="service service-guarantee">
+                      <h3 class="service-title">Гарантия</h3>
+                      <p class="services-slogan slogan-guarantee">
+                        Если купленный у нас товар поломается или заискрит, а
+                        также в случае пожара, спровоцированного его
+                        возгоранием, вы всегда можете быть уверены в нашей
+                        гарантии. Мы обменяем сгоревший товар на новый. Дом уж
+                        восстановите как-нибудь сами.
+                      </p>
+                    </div>
+                    <div class="service service-credit">
+                      <h3 class="service-title">Кредит</h3>
+                      <p class="services-slogan service-slogan-credit">
+                        Залезть в долговую яму стало проще! Кредитные
+                        консультанты придут вам на помощь.
+                      </p>
+                      <a class="button-link" href="#">Отправить заявку</a>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </form>
           </div>
         </div>
       </section>
